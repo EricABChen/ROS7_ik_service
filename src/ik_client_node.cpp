@@ -14,9 +14,6 @@ int main(int argc, char **argv)
   geometry_msgs::Pose part_pose;
   // Set varuabke
   part_pose.position.x = 0.5;
-  part_pose.position.y = 0;
-  part_pose.position.z = 0;
-  
   ik_pose.request.part_pose = part_pose;
 
   ros::NodeHandle n;
