@@ -5,9 +5,7 @@
 #include "ur_kinematics/ur_kin.h"
 
 
-bool pose_ik(ik_service::PoseIK::Request &req,
-         ik_service::PoseIK::Response &res)
-{
+bool pose_ik(ik_service::PoseIK::Request &req, ik_service::PoseIK::Response &res) {
   double q[] = {3.14, -1.13, 1.51, 3.77, -1.51, 0};
   double T[4][4];
   int num_sol;
