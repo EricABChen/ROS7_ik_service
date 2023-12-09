@@ -8,7 +8,7 @@
 bool pose_ik(ik_service::PoseIK::Request &req, ik_service::PoseIK::Response &res) {
   double q[] = {3.14, -1.13, 1.51, 3.77, -1.51, 0};
   double T[4][4];
-  int num_sol;
+  int num_sols;
   double q_sols[8][6];
   ur_kinematics::forward((double *)&q[0], (double *)&T[0][0]);
   
@@ -17,11 +17,11 @@ bool pose_ik(ik_service::PoseIK::Request &req, ik_service::PoseIK::Response &res
   T[2][3] = req.part_pose.position.z;
   
 
-  num_sol = ur_kinematics::inverse(&T[0][0], &q_sols[0][0], 0.0);
+  num_sols = ur_kinematics::inverse(&T[0][0], &q_sols[0][0], 0.0);
   
-  ROS_INFO("GET %i solutions", num_sol);
-  ROS_INFO("SEND THE NUMBER OF SOLUTIONS");
-  res.num_sols = num_sol;
+  ROS_INFO("By ur_kinematics, %i solutions were returned", num_sols);
+  ROS_INFO("Send out ,%i solutions", num_sols);
+  res.num_sols = num_sols;
   for(int i=0;i<8;++i){
   	for(int j=0;j<6;++j){
   		res.joint_solutions[i].joint_angles[j] = q_sols[i][j];
