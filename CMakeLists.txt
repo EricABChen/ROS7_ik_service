@@ -8,21 +8,9 @@ project(ik_service)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  actionlib
-  control_msgs
   ecse_373_ariac
-  geometry_msgs
-  message_generation
-  osrf_gear
-  roscpp
   rviz
-  sensor_msgs
-  std_msgs
-  std_srvs
-  tf
-  tf2
-  tf2_ros
-  trajectory_msgs
+  roscpp
 )
 
 ## System dependencies are found with CMake's conventions
