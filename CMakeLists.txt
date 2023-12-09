@@ -160,10 +160,9 @@ add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catk
 add_dependencies(ik_client_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_node
+# target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
-    ur10_kin
-)
+# )
 list(FILTER catkin_LIBRARIES EXCLUDE REGEX .*libur[3|5].*)
 target_link_libraries(ik_service_node ${catkin_LIBRARIES})
 target_link_libraries(ik_client_node ${catkin_LIBRARIES})
