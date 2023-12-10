@@ -22,10 +22,15 @@ After roscore init, press ctrl+c to run roscore in background
 
 ### Start service
 
- `rosrun ik_service ik_service_node`
-
+`rosrun ik_service ik_service_node`
+ 
 ### Start client
 
  `rosrun ik_service ik_client_node`
+
+### Launch file
+
+It is also possible to launch the ik_server using the provided launch file, simply use
+`roslaunch ik_service ik_service.launch`
 
 
