@@ -1,4 +1,4 @@
-# ecse473_f23_axc1293_ik_service
+# ROS7_ik_service
 
 ## Package description
 This repo is a ROS package that contains ik_server tool to suplement ARIAC_2019 competition
